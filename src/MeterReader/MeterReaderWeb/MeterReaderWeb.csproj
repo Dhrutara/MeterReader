@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.49.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
@@ -30,6 +31,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MeterReaderLib\MeterReaderLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\meterservice.proto" GrpcServices="Server">
+      <Link>Protos\meterservice.proto</Link>
+    </Protobuf>
   </ItemGroup>
 
 </Project>
